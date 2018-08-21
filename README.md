@@ -44,7 +44,7 @@ To see the ORM in action, make sure you are inside of the `ORM` directory in you
 - if at any point you feel that your database is corrupted, run `cat import_db.sql | sqlite3 plays.db` to reset the database back to its originally seeded data (the data in the `import_db.sql` file)
 
 ### SQL Concepts (personal use)
-- `Data Definition Language` (`DDL`): defining your database schema. 3 operators that SQL provides to manipulate a database schema:
+- `Data Definition Language` (`DDL`): defining your database schema. 3 operators that SQL provides:
   - `CREATE table`
   - `ALTER table`
   - `DROP table`
