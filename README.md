@@ -1,4 +1,4 @@
-# Model-Operandi
+# Model Operandi
 <big>**Object-Relational Mapping (ORM)**</big>
 
 - A lightweight Ruby ORM
