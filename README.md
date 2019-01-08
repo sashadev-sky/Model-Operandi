@@ -3,7 +3,7 @@
 
 - A lightweight Ruby ORM
 - Inspired by the ActiveRecord pattern
-- Written with RSpec testing and follows Test Driven Development (TDD) principles
+- Uses RSpec and a test-driven approach 
 
 ## Overview
 - The `painting.rb` and `painter.rb` files map to the database in `import_db.sql` after it is parsed by SQLite3.
