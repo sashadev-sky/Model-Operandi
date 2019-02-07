@@ -48,7 +48,10 @@ class Painter < ModelBase
 end
 
 # testing -
-# run the following commands in Pry (make sure to load 'painter.rb' in Pry first)
+
+# In your terminal, make sure you are inside of the lib directory and load 'painter.rb'
+ 
+# run the following commands in Pry:
 
 # Painter.all  #no Pablo Picasso
 # painter = Painter.new("name" => "Pablo Picasso", "birth_year" => 1881)
