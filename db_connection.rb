@@ -9,7 +9,7 @@ class DBConnection < SQLite3::Database
 
   SQL_FILE = File.join(File.dirname(__FILE__), 'import_db.sql')
   DB_FILE = File.join(File.dirname(__FILE__), 'paintings.db')
- 
+
   # creates a connection to our database
   def self.open
     @db = SQLite3::Database.new(DB_FILE)
@@ -22,7 +22,7 @@ class DBConnection < SQLite3::Database
     reset! if @db.nil?
     @db
   end
-  
+
   def self.reset!
     `#{"cat '#{SQL_FILE}' | sqlite3 '#{DB_FILE}'"}`
     DBConnection.open

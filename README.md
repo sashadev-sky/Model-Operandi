@@ -1,11 +1,11 @@
 # Model Operandi
-<big>**Object-Relational Mapping (ORM)**</big>
 
-- A lightweight Ruby ORM
+- A lightweight Ruby Object-Relational Mapping (ORM)
 - Inspired by the ActiveRecord pattern
-- Uses RSpec and a test-driven approach 
+- Uses RSpec and a test-driven approach
 
 ## Overview
+
 - The `painting.rb` and `painter.rb` files map to the database in `import_db.sql` after it is parsed by SQLite3.
 - The object classes (`Painting`, `Painter`) are mapped to the data tables (`paintings`, `painters`).
 - Object instances are mapped to the rows in the tables: each row is a single entity.
@@ -17,6 +17,7 @@
 ## Terminology
 
 **SQLite3**: One implementation of SQL, meaning it's the software that actually processes our SQL commands. Synonymous to saying it's a `relational database` or `relational database management system` (`RDBMS`).
+
 - It is:
   - Serverless: a library loaded by our program, which then directly interacts with the underlying database data.
   - A common development database, not used for production because of performance limitations.
@@ -26,10 +27,13 @@
 **Mapping (n)**: The definition of how an object's property or a relationship is persisted in permanent storage.
 
 **Object-Relational Mapping (ORM)** is a technique that lets the developer query and manipulate data from a relational database using an object-oriented paradigm.
-  - An ORM is written in an object-oriented language (in this case, Ruby) and wrapped around the relational database.
-  - Motivation: one can easily interact with the data and its attributes as objects, without writing SQL statements directly.
+
+- An ORM is written in an object-oriented language (in this case, Ruby) and wrapped around the relational database.
+
+- Motivation: one can easily interact with the data and its attributes as objects, without writing SQL statements directly.
 
 ## API
+
 - `::all`: return an array of all the records in the DB
 - `::find`: return a single record retrieved by primary key
 - `::find_by`: return the first record that matches specified attributes
@@ -39,9 +43,9 @@
 
 ## Testing the ORM
 
-You can use Pry to see the ORM in action. 
+You can use Pry to see the ORM in action.
 
-To set up the environment, make sure you are inside of the project directory in your terminal and run: 
+To set up the environment, make sure you are inside of the project directory in your terminal and run:
 
 ```bash
 # install dependencies
@@ -57,11 +61,11 @@ In the pry session:
 
 - If at any point you feel that your database is corrupted, run `DBConnection.reset!` to reset it back to its originally seeded data.
 
-- To see the SQL queries behind the Ruby methods you test, set `PRINT_QUERIES = true` (currently set to false) at the top of the `db_connection.rb` file. 
+- To see the SQL queries behind the Ruby methods you test, set `PRINT_QUERIES = true` (currently set to false) at the top of the `db_connection.rb` file.
 
-RSpec: 
+RSpec:
 
-- See the `spec` folder for documentation on the functionality of this ORM's interface. 
+- See the `spec` folder for documentation on the functionality of this ORM's interface.
 
 - To run the specs, in your terminal run:
 
@@ -72,10 +76,11 @@ bundle exec rspec
 # test individual spec files
 bundle exec rspec ./spec/file_name.rb
 ```
- 
+
 ---------------------------------------------------------
 
 ### SQL Concepts (personal use)
+
 - `Data Definition Language` (`DDL`): defines the structure of our database (also called schema). 3 operators that SQL provides:
   - `CREATE table`
   - `ALTER table`
@@ -90,6 +95,6 @@ bundle exec rspec ./spec/file_name.rb
 - `Singleton` module / pattern
 - Heredocs
 - `ActiveSupport::Inflector`
-- `RSpec` 
+- `RSpec`
   - Model specs are considered **unit tests** since they test each model as an independent unit
-  - These will be the most specific, detailed tests in a Rails app but also one of the most essential 
+  - These will be the most specific, detailed tests in a Rails app but also one of the most essential

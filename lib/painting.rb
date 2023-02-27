@@ -4,7 +4,7 @@ require_relative './model_base'
 
 class Painting < ModelBase
   attr_accessor :title, :year, :painter_id
-  attr_reader :id 
+  attr_reader :id
 
   def initialize(options)
     @id = options['id']
@@ -35,7 +35,7 @@ class Painting < ModelBase
     else
       # if id doesnt exist, perform an INSERT of the fields into the DB. After the insert,
       # last_insert_row_id gets the newly issued id for the inserted row. Save this in
-      # an @id instance variable in the object instance. 
+      # an @id instance variable in the object instance.
       # Future calls to save on this object should issue an UPDATE
       DBConnection.execute(<<-SQL, title, year, painter_id)
         INSERT INTO

@@ -50,7 +50,7 @@ end
 # testing -
 
 # In your terminal, make sure you are inside of the lib directory and load 'painter.rb'
- 
+
 # run the following commands in Pry:
 
 # Painter.all  #no Pablo Picasso

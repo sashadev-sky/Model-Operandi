@@ -4,7 +4,7 @@ require_relative '../db_connection'
 
  # note: the ActiveSupport inflector library handles pluralization for some english grammar 
  # 'edge cases' incorrectly. I have added a file (config/inflections.rb) for easily overriding these cases
- # in case it becomes necessary. 
+ # in case it becomes necessary.
 
 class ModelBase
 

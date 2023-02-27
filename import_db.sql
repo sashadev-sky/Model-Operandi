@@ -11,8 +11,6 @@ CREATE TABLE paintings
   FOREIGN KEY (painter_id) REFERENCES painters(id)
 );
 
-DROP TABLE if exists painters;
-
 CREATE TABLE painters
 (
   id INTEGER PRIMARY KEY,

@@ -5,16 +5,16 @@ describe ModelBase do
   before(:each) { DBConnection.reset! }
   after(:each) { DBConnection.reset! }
 
-  describe '::all' do 
+  describe '::all' do
     it 'returns an array of object items for a class' do
-      all_painters = Painter.all 
+      all_painters = Painter.all
       expect(all_painters).to all(be_a(Painter))
     end
-     
+
     it 'returns all object items for a class in the database' do
-      all_paintings = Painting.all 
+      all_paintings = Painting.all
       expect(all_paintings.count).to eq(4)
-    end 
+    end
   end
 
   describe '::where' do
@@ -31,11 +31,11 @@ describe ModelBase do
   end
 
   describe '::first' do
-    it 'only hits the database once' do 
+    it 'only hits the database once' do
       expect(DBConnection).to(
         receive(:get_first_row).exactly(1).times.and_call_original)
       Painter.first
-    end 
+    end
   end
 
   describe '::columns' do
@@ -43,7 +43,7 @@ describe ModelBase do
       expect(Painter.columns).to eq([:id, :name, :birth_year])
     end
   end
-  
+
 end
 
 
